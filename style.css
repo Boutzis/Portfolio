@@ -1,4 +1,4 @@
-/* --- 1. CORE & RESET --- */
+/* --- CORE & RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ body {
     z-index: 1;
 }
 
-/* --- 2. NAVBAR --- */
+/* --- NAVBAR --- */
 .custom-navbar {
     background: rgba(11, 17, 32, 0.9) !important;
     backdrop-filter: blur(15px);
@@ -68,7 +68,7 @@ body {
     text-shadow: 0 0 8px #00ccff;
 }
 
-/* --- 3. HERO SECTION --- */
+/* --- HERO SECTION --- */
 .hero-badge {
     display: inline-block;
     padding: 6px 16px;
@@ -112,9 +112,18 @@ body {
     box-shadow: 0 0 40px rgba(0, 204, 255, 0.15);
 }
 
-/* --- 4. ABOUT SECTION --- */
-.text-primary-neon { color: #00ccff; letter-spacing: 2px; font-size: 0.9rem; }
-.section-title-large { font-size: 2.5rem; font-weight: 800; line-height: 1.2; color: #fff; }
+/* --- ABOUT SECTION --- */
+.text-primary-neon { 
+    color: #00ccff; 
+    letter-spacing: 2px; 
+    font-size: 0.9rem;
+}
+.section-title-large { 
+    font-size: 2.5rem; 
+    ont-weight: 800; 
+    line-height: 1.2; 
+    color: #fff; 
+}
 
 .profile-card-wrapper {
     position: relative;
@@ -153,8 +162,17 @@ body {
     min-width: 160px;
 }
 
-.experience-badge .number { font-size: 1.8rem; font-weight: 800; line-height: 1; }
-.experience-badge .text { font-size: 0.75rem; font-weight: 700; line-height: 1.1; }
+.experience-badge .number { 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    line-height: 1; 
+}
+
+.experience-badge .text { 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+    line-height: 1.1; 
+}
 
 .about-feature {
     display: flex;
@@ -166,9 +184,22 @@ body {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-.about-feature i { font-size: 1.5rem; color: #00ccff; }
-.about-feature h4 { font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
-.about-feature p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin: 0; }
+.about-feature i { 
+    font-size: 1.5rem; 
+    color: #00ccff; 
+}
+
+.about-feature h4 { 
+    font-size: 1.1rem; 
+    margin-bottom: 5px; 
+    color: #fff; 
+}
+
+.about-feature p { 
+    font-size: 0.85rem; 
+    color: rgba(255,255,255,0.5); 
+    margin: 0; 
+}
 
 .about-stats {
     display: flex;
@@ -209,7 +240,8 @@ body {
     align-self: center;
 }
 
-/* --- 5. INFINITE PROJECTS SLIDER --- */
+/* --- PROJECTS --- */
+
 .slider-wrapper {
     overflow: hidden;
     padding: 60px 0;
@@ -218,7 +250,7 @@ body {
 
 .slider-track {
     display: flex;
-    gap: 40px;
+    gap: 40px; 
     /* Η διάρκεια 50s ελέγχει την ταχύτητα - κάντο 60s για πιο αργά */
     animation: scroll 50s linear infinite;
     width: max-content;
@@ -327,8 +359,7 @@ body {
     }
 }
 
-/* --- MODERN SKILLS GRID --- */
-/* --- ENHANCED SKILLS SECTION --- */
+/* --- SKILLS SECTION --- */
 .new-skill-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -344,7 +375,7 @@ body {
 }
 
 .new-skill-card i {
-    font-size: 4rem; /* Πολύ μεγαλύτερο εικονίδιο */
+    font-size: 4rem; /* Μεγαλύτερο εικονίδιο */
     margin-bottom: 20px;
     transition: 0.3s;
 }
@@ -377,7 +408,7 @@ body {
 .bs-icon { color: #7952b3; }
 .joomla-icon { color: #f47321; }
 
-/* --- 7. BUTTONS --- */
+/* --- BUTTONS --- */
 .btn-primary-neon {
     background: #00ccff;
     color: #0b1120;
@@ -402,7 +433,7 @@ body {
     transition: 0.3s;
 }
 
-/* --- CONTACT FORM STYLES --- */
+/* --- CONTACT FORM --- */
 .contact-glass-card {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
@@ -462,7 +493,7 @@ body {
     border: 1px solid rgba(255, 68, 68, 0.2);
 }
 
-/* --- 8. FOOTER & CONTACT --- */
+/* --- FOOTER & CONTACT --- */
 .contact-glass-card {
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(10px);
