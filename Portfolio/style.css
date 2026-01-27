@@ -1,0 +1,508 @@
+/* --- 1. CORE & RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1120;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at top right, #1e293b, #0b1120);
+}
+
+.content-section {
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- 2. NAVBAR --- */
+.custom-navbar {
+    background: rgba(11, 17, 32, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 204, 255, 0.2);
+    padding: 15px 0;
+}
+
+.neon-logo {
+    color: #fff !important;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.neon-logo i {
+    color: #00ccff;
+    margin-right: 8px;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+.neon-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.neon-link:hover {
+    color: #00ccff !important;
+    text-shadow: 0 0 8px #00ccff;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 204, 255, 0.1);
+    border: 1px solid rgba(0, 204, 255, 0.2);
+    color: #00ccff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #fff, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle-minimal {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: #f8f9fa;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.hero-description p {
+    font-size: 1.1rem;
+    max-width: 550px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.main-img {
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0, 204, 255, 0.15);
+}
+
+/* --- 4. ABOUT SECTION --- */
+.text-primary-neon { color: #00ccff; letter-spacing: 2px; font-size: 0.9rem; }
+.section-title-large { font-size: 2.5rem; font-weight: 800; line-height: 1.2; color: #fff; }
+
+.profile-card-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.profile-img {
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile-card-glow {
+    position: absolute;
+    top: 10%; left: 10%; width: 80%; height: 80%;
+    background: #00ccff;
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 10px; right: -5px;
+    background: #00ccff;
+    color: #0b1120;
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 3;
+    box-shadow: 0 10px 20px rgba(0,204,255,0.3);
+    min-width: 160px;
+}
+
+.experience-badge .number { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+.experience-badge .text { font-size: 0.75rem; font-weight: 700; line-height: 1.1; }
+
+.about-feature {
+    display: flex;
+    gap: 15px;
+    align-items: center; 
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.about-feature i { font-size: 1.5rem; color: #00ccff; }
+.about-feature h4 { font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
+.about-feature p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin: 0; }
+
+.about-stats {
+    display: flex;
+    align-items: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
+    gap: 40px;
+    margin-top: 3rem;
+    padding-left: 10px; /* Μικρό offset για να έρθει ακριβώς κάτω από το badge */
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Στοιχίζει τον αριθμό με το κείμενο */
+    text-align: center;
+}
+
+.stat-num { 
+    font-size: 2.2rem; /* Ελαφρώς μεγαλύτερο για να δείχνει πιο γεμάτο */
+    font-weight: 800; 
+    color: #00ccff; 
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+}
+
+.stat-item p { 
+    margin: 0; 
+    color: rgba(255,255,255,0.7); 
+    font-size: 0.85rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-divider { 
+    width: 1px; 
+    height: 50px; 
+    background: rgba(255,255,255,0.15);
+    align-self: center;
+}
+
+/* --- 5. INFINITE PROJECTS SLIDER --- */
+.slider-wrapper {
+    overflow: hidden;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 40px;
+    /* Η διάρκεια 50s ελέγχει την ταχύτητα - κάντο 60s για πιο αργά */
+    animation: scroll 50s linear infinite;
+    width: max-content;
+}
+
+/* Pause στο hover για να μπορεί ο χρήστης να κάνει κλικ */
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+.project-card {
+    width: 420px;
+    height: 280px;
+    border-radius: 20px;
+    position: relative;
+    background: #1e293b;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 17, 32, 0.95), rgba(11, 17, 32, 0.2));
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(4px);
+}
+
+.overlay-content h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #fff;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+
+.overlay-content p {
+    font-size: 0.9rem;
+    color: #00ccff;
+    margin-bottom: 15px;
+    transform: translateY(20px);
+    transition: 0.5s ease;
+}
+
+.view-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 4px;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    z-index: 10;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .overlay-content h5,
+.project-card:hover .overlay-content p,
+.project-card:hover .view-btn {
+    transform: translateY(0);
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* SMOOTH INFINITE LOOP */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Μετακινείται ακριβώς μέχρι τη μέση των συνολικών καρτών */
+        transform: translateX(calc(-50% - 20px)); 
+    }
+}
+
+/* --- MODERN SKILLS GRID --- */
+/* --- ENHANCED SKILLS SECTION --- */
+.new-skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 20px; /* Περισσότερο ύψος */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-skill-card i {
+    font-size: 4rem; /* Πολύ μεγαλύτερο εικονίδιο */
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.new-skill-card h5 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Hover Effects */
+.new-skill-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #00ccff;
+    box-shadow: 0 10px 30px rgba(0, 204, 255, 0.2);
+}
+
+.new-skill-card:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px currentColor); /* Glow στα εικονίδια */
+}
+
+/* Χρώματα Εικονιδίων */
+.html-icon { color: #e34f26; }
+.css-icon { color: #1572b6; }
+.js-icon { color: #f7df1e; }
+.bs-icon { color: #7952b3; }
+.joomla-icon { color: #f47321; }
+
+/* --- 7. BUTTONS --- */
+.btn-primary-neon {
+    background: #00ccff;
+    color: #0b1120;
+    font-weight: 600;
+    border-radius: 4px !important;
+    border: none;
+    padding: 12px 30px;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+    transition: 0.3s;
+}
+
+.btn-primary-neon:hover {
+    background: #00ccff;
+    transform: translateY(-2px);
+}
+
+.btn-outline-neon {
+    border: 1px solid rgba(0, 204, 255, 0.5);
+    color: #fff;
+    border-radius: 4px !important;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+/* --- CONTACT FORM STYLES --- */
+.contact-glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #00ccff !important;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.2);
+    outline: none;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+#form-status {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    display: none; /* Κρυφό μέχρι να στείλουμε */
+}
+
+.status-success {
+    display: block !important;
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.status-error {
+    display: block !important;
+    color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+    border: 1px solid rgba(255, 68, 68, 0.2);
+}
+
+/* --- 8. FOOTER & CONTACT --- */
+.contact-glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #00ccff;
+    transform: translateY(-3px);
+}
+
+/* --- 9. RESPONSIVE --- */
+@media (max-width: 991px) {
+    .hero-title { font-size: 2.8rem; }
+    .about-stats { gap: 20px; justify-content: center; }
+    .project-card { width: 320px; height: 220px; }
+}
