@@ -417,7 +417,12 @@ body {
 .wp-icon{
     color: #21759b;
 }
-.joomla-icon { color: #f47321; }
+.joomla-icon { 
+    color: #f47321; 
+}
+.git-icon { 
+    color: #f05032;
+}
 
 /* --- BUTTONS --- */
 .btn-primary-neon {
@@ -548,4 +553,5 @@ footer {
     .about-stats { gap: 20px; justify-content: center; }
     .project-card { width: 320px; height: 220px; }
 }
+
 
