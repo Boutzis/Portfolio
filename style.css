@@ -402,10 +402,21 @@ body {
 }
 
 /* Χρώματα Εικονιδίων */
-.html-icon { color: #e34f26; }
-.css-icon { color: #1572b6; }
-.js-icon { color: #f7df1e; }
-.bs-icon { color: #7952b3; }
+.html-icon{ 
+    color: #e34f26; 
+}
+.css-icon{ 
+    color: #1572b6; 
+}
+.js-icon{ 
+    color: #f7df1e; 
+}
+.bs-icon{ 
+    color: #7952b3; 
+}
+.wp-icon{
+    color: #21759b;
+}
 .joomla-icon { color: #f47321; }
 
 /* --- BUTTONS --- */
@@ -537,3 +548,4 @@ footer {
     .about-stats { gap: 20px; justify-content: center; }
     .project-card { width: 320px; height: 220px; }
 }
+
