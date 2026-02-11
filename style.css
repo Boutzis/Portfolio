@@ -423,6 +423,9 @@ body {
 .git-icon { 
     color: #f05032;
 }
+.ps-icon {
+    color: #31A8FF;
+}
 
 /* --- BUTTONS --- */
 .btn-primary-neon {
@@ -553,5 +556,6 @@ footer {
     .about-stats { gap: 20px; justify-content: center; }
     .project-card { width: 320px; height: 220px; }
 }
+
 
 
